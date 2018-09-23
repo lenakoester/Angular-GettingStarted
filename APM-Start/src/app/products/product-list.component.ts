@@ -51,7 +51,7 @@ export class ProductListComponent implements OnInit {
   }
 
   onRatingClicked(message:string): void{
-    this.pageTitle = this.pageTitle + message;
+    this.pageTitle = this.pageTitle +" "+ message;
   }
 
   performFilter(filterBy: string): IProduct[] {
