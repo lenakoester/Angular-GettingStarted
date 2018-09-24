@@ -51,6 +51,5 @@ export class ProductListComponent implements OnInit {
       }
       error => this.errorMessage = <any>error
     )
-    this.filteredProducts = this.products;
   }
 }
