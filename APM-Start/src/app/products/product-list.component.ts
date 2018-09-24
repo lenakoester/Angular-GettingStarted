@@ -27,7 +27,6 @@ export class ProductListComponent implements OnInit {
   products: IProduct[] = [];
 
   constructor(private productService: ProductService) {
-    this.listFilter = 'cart';
   }
 
   onRatingClicked(message:string): void{
@@ -47,7 +46,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.productService.getProducts().subscribe(
       products => {
-        this.products = products,
+        this.products = products;
         this.filteredProducts = this.products;
       }
       error => this.errorMessage = <any>error
