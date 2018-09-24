@@ -48,8 +48,9 @@ export class ProductListComponent implements OnInit {
       products => {
         this.products = products;
         this.filteredProducts = this.products;
-      }
+      },
       error => this.errorMessage = <any>error
     )
   }
+
 }
