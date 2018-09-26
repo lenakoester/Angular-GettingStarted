@@ -22,7 +22,7 @@ export class ProductService {
 
   getProduct(id: number): Observable<IProduct | undefined> {
     return this.getProducts().pipe(
-      map((products: IProduct[]) => products.find(p => p.productId === id))
+      Map((products: IProduct[]) => products.find(p => p.productId === id))
     );
   }
 
