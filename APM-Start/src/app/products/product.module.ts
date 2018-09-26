@@ -17,12 +17,14 @@ import { ProductDetailGuard} from './product-detail.guard';
     CommonModule,
     FormsModule,
     RouterModule,
-    RouterModule.forRoot([
+    RouterModule.forChild([
       {path: 'products', component:ProductListComponent},
-      {path: 'products/:id',
-       canActivate: [ProductDetailGuard],
-       component: ProductDetailComponent}
-    ], {useHash:true}),
+      {
+        path: 'products/:id',
+        canActivate: [ProductDetailGuard],
+        component: ProductDetailComponent
+      },
+    ]),
   ],
   declarations: [
     ProductListComponent,
