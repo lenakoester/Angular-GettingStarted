@@ -10,12 +10,11 @@ import { ConvertToSpacesPipe } from '../shared/convert-to-spaces.pipe';
 import { StarComponent } from '../shared/star.component';
 import { ProductDetailComponent } from './product-detail.component';
 import { ProductDetailGuard} from './product-detail.guard';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
     RouterModule,
     RouterModule.forChild([
       {path: 'products', component:ProductListComponent},
@@ -25,12 +24,12 @@ import { ProductDetailGuard} from './product-detail.guard';
         component: ProductDetailComponent
       },
     ]),
+    SharedModule
   ],
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
-    ConvertToSpacesPipe,
-    StarComponent
+    ConvertToSpacesPipe
   ]
 })
 export class ProductModule { }
